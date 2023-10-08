@@ -6,7 +6,7 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - .env.local
+      - stack.env
   mongo:
     image: mongo:5.0
     restart: always
@@ -18,7 +18,7 @@ services:
       # Specify these envs through .env.local
       # MONGO_INITDB_ROOT_USERNAME: root
       # MONGO_INITDB_ROOT_PASSWORD: example
-      - .env.local
+      - stack.env
 
 volumes:
   mongodb-data:
